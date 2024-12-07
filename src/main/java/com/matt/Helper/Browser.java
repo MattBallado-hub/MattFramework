@@ -7,12 +7,15 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Browser {
 
 	public void openBrowser(String browser, String headless) {
 		if (browser.equalsIgnoreCase("Chrome")) {
-			String driverPath = "src/test/resources/webdrivers/chromedriver.exe";
-			System.setProperty("webdriver.chrome.driver", driverPath);
+			WebDriverManager.chromedriver().setup();
+//			String driverPath = "src/test/resources/webdrivers/chromedriver.exe";
+//			System.setProperty("webdriver.chrome.driver", driverPath);
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--inprivate");
 			options.addArguments("--disable-gpu");
@@ -23,8 +26,9 @@ public class Browser {
 
 			Driver.setDriver(new ChromeDriver(options));
 		} else if (browser.equalsIgnoreCase("Edge")) {
-			String driverPath = "src/test/resources/webdrivers/msedgedriver.exe";
-			System.setProperty("webdriver.edge.driver", driverPath);
+			WebDriverManager.edgedriver().setup();
+//			String driverPath = "src/test/resources/webdrivers/msedgedriver.exe";
+//			System.setProperty("webdriver.edge.driver", driverPath);
 			EdgeOptions options = new EdgeOptions();
 			options.addArguments("--inprivate");
 			options.addArguments("--disable-gpu");

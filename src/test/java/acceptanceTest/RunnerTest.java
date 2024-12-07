@@ -20,6 +20,6 @@ import io.cucumber.junit.CucumberOptions;
 		glue = {
 				"com.matt.stepDef"
 		},
-		tags = "@Test")
+		tags = "@TC001")
 public class RunnerTest {
 }
