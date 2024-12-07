@@ -27,6 +27,8 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+    - name: Check Microsoft Edge version
+      run: microsoft-edge --version
     - name: Ensure EdgeDriver is executable
       run: chmod +x src/test/resources/webdrivers/msedgedriver.exe
     - name: Build with Maven
