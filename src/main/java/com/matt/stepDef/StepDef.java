@@ -9,7 +9,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class stepDef {
+public class StepDef {
 
 	@Given("I navigate to {string}")
 	public void navigate(String url) {

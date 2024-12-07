@@ -24,9 +24,9 @@ public class CommonPage extends CustomEvent {
 		System.out.println("Actual: " + actualValue);
 		System.out.println("Expected: " + expectedValue);
 		if (actualValue.equals(expectedValue)) {
-			throw new CustomException("Page Title is incorrect");
+			throw new CustomException("Page Title is correct");
 		} else {
-			System.out.println("Page Title is correct");
+			System.out.println("Page Title is incorrect");
 		}
 		takeScreenshot("validateNotPageTitle()");
 	}

@@ -1,6 +1,7 @@
 package com.matt.stepDef;
 
 import com.matt.Helper.Browser;
+import com.matt.Helper.CustomEvent;
 import com.matt.Helper.Driver;
 import com.matt.Helper.PropertyManager;
 
@@ -16,12 +17,15 @@ public class Hooks {
 	@Before
 	public void startUp(Scenario scenario) {
 		Driver.setScenario(scenario);
-		browser.openBrowser(propertyManager.getProperty("Browser"));
+		browser.openBrowser(propertyManager.getProperty("Browser"), propertyManager.getProperty("Headless"));
 	}
 
 	@After
 	public void tearDown() {
-		browser.closeBrowser();
+		if (Driver.getScenario().isFailed()) {
+			new CustomEvent().takeScreenshot("Failed Screenshot");
+		}
+		browser.quitBrowser();
 	}
 
 }

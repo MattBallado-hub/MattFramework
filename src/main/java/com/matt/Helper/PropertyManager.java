@@ -5,8 +5,7 @@ import java.util.Properties;
 
 public class PropertyManager {
 
-	String projectPath = System.getProperty("user.dir");
-	String propertiesPath = projectPath + "\\src\\test\\resources\\properties\\env.properties";
+	String propertiesPath = "src/test/resources/properties/env.properties";
 
 	public String getProperty(String key) {
 		Properties properties = null;
@@ -17,7 +16,7 @@ public class PropertyManager {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return String.valueOf(properties.get(key));
+		return String.valueOf(properties.getProperty(key));
 	}
 	
 }
