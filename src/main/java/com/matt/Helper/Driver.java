@@ -1,28 +1,35 @@
 package com.matt.Helper;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.cucumber.java.Scenario;
 
 public class Driver {
 
-	private WebDriver driver;
-	private Scenario scenario;
+	private static WebDriver driver;
+	private static Scenario scenario;
 
-	public void setDriver(WebDriver driver) {
-		this.driver = driver;
+	public static void setDriver(WebDriver driver) {
+		Driver.driver = driver;
 	}
 
-	public WebDriver getDriver() {
-		return this.driver;
+	public static WebDriver getDriver() {
+		return Driver.driver;
 	}
 
-	public void setScenario(Scenario scenario) {
-		this.scenario = scenario;
+	public static void setScenario(Scenario scenario) {
+		Driver.scenario = scenario;
 	}
 
-	public Scenario getScenario() {
-		return this.scenario;
+	public static Scenario getScenario() {
+		return Driver.scenario;
 	}
-
+	
+	public static WebDriverWait getWait() {
+		return new WebDriverWait(Driver.driver, Duration.ofSeconds(10));
+	}
+	
 }

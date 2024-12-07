@@ -9,8 +9,6 @@ import org.openqa.selenium.edge.EdgeOptions;
 
 public class Browser {
 
-	public static Driver driver = new Driver();
-
 	public void openBrowser(String browser) {
 		String projectPath = System.getProperty("user.dir");
 
@@ -20,21 +18,21 @@ public class Browser {
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--inprivate");
 
-			driver.setDriver(new ChromeDriver());
+			Driver.setDriver(new ChromeDriver());
 		} else if (browser.equalsIgnoreCase("Edge")) {
 			String driverPath = projectPath + "\\src\\test\\resources\\webdrivers\\msedgedriver.exe";
 			System.setProperty("webdriver.edge.driver", driverPath);
 			EdgeOptions options = new EdgeOptions();
 			options.addArguments("--inprivate");
 
-			driver.setDriver(new EdgeDriver());
+			Driver.setDriver(new EdgeDriver());
 		}
-		driver.getDriver().manage().window().maximize();
-		driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.valueOf(30)));
+		Driver.getDriver().manage().window().maximize();
+		Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(Long.valueOf(30)));
 	}
 
 	public void closeBrowser() {
-		driver.getDriver().quit();
+		Driver.getDriver().quit();
 	}
 
 }
