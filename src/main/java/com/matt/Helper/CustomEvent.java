@@ -1,7 +1,5 @@
 package com.matt.Helper;
 
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -17,9 +15,9 @@ public class CustomEvent {
 
 	Actions actions = new Actions(Driver.getDriver());
 
-	public void staticWait(long seconds) {
+	public void staticWait(int seconds) {
 		try {
-			Thread.sleep(Duration.ofSeconds(seconds));
+			Thread.sleep(seconds*1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
