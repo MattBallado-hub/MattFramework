@@ -27,10 +27,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Install EdgeDriver
-      uses: nanasess/setup-edgedriver@v1
-      with:
-        edgedriver-version: 'latest'
     - name: Check Microsoft Edge version
       run: microsoft-edge --version
     - name: Ensure EdgeDriver is executable
