@@ -15,7 +15,6 @@ public class CommonPage extends CustomEvent {
 		} else {
 			throw new CustomException("Page Title is incorrect");
 		}
-		
 		takeScreenshot("validatePageTitle()");
 	}
 

@@ -14,8 +14,6 @@ public class Browser {
 	public void openBrowser(String browser, String headless) {
 		if (browser.equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().setup();
-//			String driverPath = "src/test/resources/webdrivers/chromedriver.exe";
-//			System.setProperty("webdriver.chrome.driver", driverPath);
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--inprivate");
 			options.addArguments("--disable-gpu");
@@ -27,8 +25,6 @@ public class Browser {
 			Driver.setDriver(new ChromeDriver(options));
 		} else if (browser.equalsIgnoreCase("Edge")) {
 			WebDriverManager.edgedriver().setup();
-//			String driverPath = "src/test/resources/webdrivers/msedgedriver.exe";
-//			System.setProperty("webdriver.edge.driver", driverPath);
 			EdgeOptions options = new EdgeOptions();
 			options.addArguments("--inprivate");
 			options.addArguments("--disable-gpu");

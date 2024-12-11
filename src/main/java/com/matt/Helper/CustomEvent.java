@@ -17,7 +17,7 @@ public class CustomEvent {
 
 	public void staticWait(int seconds) {
 		try {
-			Thread.sleep(seconds*1000);
+			Thread.sleep(seconds * 1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -95,9 +95,9 @@ public class CustomEvent {
 		JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 
 		String originalStyle = element.getDomProperty("style");
-		String newStyle = "\"; border: 2px solid red;\"";
-		js.executeScript("arguments[0].setAttribute('style', arguments[0].getAttribute('style') + " + newStyle + ")",
-				element);
+		String newStyle = "'border: 2px solid red;'";
+		String finalStyle = "arguments[0].setAttribute('style'," + newStyle + ")";
+		js.executeScript(finalStyle, element);
 
 		actions.moveToElement(element).perform();
 

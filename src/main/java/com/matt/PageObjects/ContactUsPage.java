@@ -14,17 +14,12 @@ public class ContactUsPage extends CustomEvent {
 	private By aboutUsLink = By.xpath("(//a[@title='About Us'])[1]");
 	private By careersLink = By.xpath("(//a[@title='Careers'])[1]");
 
-	private By footerExploreMoreLabel = By
-			.xpath("//div[@class='footer__link__group-ctn']//span[text()='Explore more of Datacom']");
+	private By footerExploreMoreLabel = By.xpath("//div[@class='footer__link__group-ctn']//span[text()='Explore more of Datacom']");
 	private By footerDiscoverLink = By.xpath("//div[@class='footer__link__group-ctn']//a[@href='/nz/en/discover']");
-	private By footerWhoWeAreLink = By
-			.xpath("//div[@class='footer__link__group-ctn']//a[@href='/nz/en/about-us/who-we-are']");
-	private By footerSustainabilityLink = By
-			.xpath("//div[@class='footer__link__group-ctn']//a[@href='/nz/en/about-us/sustainability']");
-	private By footerOurLocationLink = By
-			.xpath("//div[@class='footer__link__group-ctn']//a[@href='/nz/en/about-us/our-locations']");
-	private By footerYearInReviewLink = By
-			.xpath("//div[@class='footer__link__group-ctn']//a[@href='/nz/en/about-us/year-in-review']");
+	private By footerWhoWeAreLink = By.xpath("//div[@class='footer__link__group-ctn']//a[@href='/nz/en/about-us/who-we-are']");
+	private By footerSustainabilityLink = By.xpath("//div[@class='footer__link__group-ctn']//a[@href='/nz/en/about-us/sustainability']");
+	private By footerOurLocationLink = By.xpath("//div[@class='footer__link__group-ctn']//a[@href='/nz/en/about-us/our-locations']");
+	private By footerYearInReviewLink = By.xpath("//div[@class='footer__link__group-ctn']//a[@href='/nz/en/about-us/year-in-review']");
 
 	private By acceptCookiesButton = By.xpath("//button[@id='onetrust-accept-btn-handler']");
 
@@ -107,7 +102,6 @@ public class ContactUsPage extends CustomEvent {
 	}
 
 	public void validateFooterLinks(String footerLink) throws CustomException {
-
 		if (footerLink.equals("Explore more of Datacom")) {
 			shouldBeDisplayed(footerExploreMoreLabel);
 		} else if (footerLink.equals("Discover")) {
