@@ -6,12 +6,11 @@ import io.restassured.response.Response;
 
 public class APIStepDef {
 
-	@Given("I get the data based on the baseURI {string} and statusCode is {string}")
-	public void getMethod(String baseURI, String statusCode) {
+	@Given("I get the data based on the baseURI {string}, path {string}, and statusCode is {string}")
+	public void getMethod(String baseURI, String path, String statusCode) {
 		RestAssured.baseURI = baseURI;
-		RestAssured.baseURI = "https://jsonplaceholder.typicode.com";
 
-		Response response = RestAssured.given().when().get("/users/1");
+		Response response = RestAssured.given().when().get(path);
 
 		response.then().statusCode(Integer.valueOf(statusCode));
 
