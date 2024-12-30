@@ -15,6 +15,7 @@ import com.matt.robot.ITRTG.page.Ads;
 import com.matt.robot.ITRTG.page.Afky;
 import com.matt.robot.ITRTG.page.DivGen;
 import com.matt.robot.ITRTG.page.Pets;
+import com.matt.robot.ITRTG.page.Planet;
 import com.matt.robot.ITRTG.page.Special;
 import com.matt.robot.core.ForceStopProgram;
 import com.matt.robot.core.KeyboardActions;
@@ -76,6 +77,9 @@ public class ITRTGTest {
 			public void actionPerformed(ActionEvent e) {
 				int adsCounter = 0;
 
+				mouse.click(366, 1060);
+				mouse.click(1875, 40);
+
 				while (true) {
 					if (afkyClone.isSelected()) {
 						Afky.afkyGod();
@@ -96,6 +100,7 @@ public class ITRTGTest {
 
 					}
 					if (ubv2.isSelected()) {
+						Planet.ubv2();
 						break;
 					}
 					if (tbs.isSelected()) {
@@ -103,7 +108,7 @@ public class ITRTGTest {
 					}
 					if (ads.isSelected()) {
 						Ads.ads();
-						if (++adsCounter == 10) {
+						if (++adsCounter >= 10) {
 							break;
 						}
 					}
