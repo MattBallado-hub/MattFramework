@@ -10,7 +10,7 @@ public class KeyboardActions extends RobotCore {
 			if (KeyEvent.CHAR_UNDEFINED != keyCode) {
 				robot.keyPress(keyCode);
 				robot.keyRelease(keyCode);
-				delay(100);
+				delay(35);
 			}
 		}
 	}
@@ -22,7 +22,7 @@ public class KeyboardActions extends RobotCore {
 		for (int key : keys) {
 			robot.keyRelease(key);
 		}
-		delay(200);
+		delay(35);
 	}
 
 }
