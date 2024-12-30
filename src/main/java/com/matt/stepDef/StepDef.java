@@ -1,9 +1,9 @@
 package com.matt.stepDef;
 
-import com.matt.Handler.CustomException;
-import com.matt.Helper.Driver;
-import com.matt.PageObjects.CommonPage;
-import com.matt.PageObjects.ContactUsPage;
+import com.matt.handler.CustomException;
+import com.matt.helper.Driver;
+import com.matt.pageObjects.CommonPage;
+import com.matt.pageObjects.ContactUsPage;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

@@ -1,9 +1,9 @@
-package com.matt.PageObjects;
+package com.matt.pageObjects;
 
 import org.openqa.selenium.By;
 
-import com.matt.Handler.CustomException;
-import com.matt.Helper.CustomEvent;
+import com.matt.handler.CustomException;
+import com.matt.helper.CustomEvent;
 
 public class ContactUsPage extends CustomEvent {
 

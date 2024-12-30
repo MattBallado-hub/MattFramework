@@ -1,4 +1,4 @@
-package com.matt.Helper;
+package com.matt.helper;
 
 import java.io.FileInputStream;
 import java.util.Properties;

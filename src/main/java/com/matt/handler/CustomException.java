@@ -1,4 +1,4 @@
-package com.matt.Handler;
+package com.matt.handler;
 
 public class CustomException extends Exception {
 

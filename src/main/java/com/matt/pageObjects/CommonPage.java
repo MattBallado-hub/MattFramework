@@ -1,8 +1,8 @@
-package com.matt.PageObjects;
+package com.matt.pageObjects;
 
-import com.matt.Handler.CustomException;
-import com.matt.Helper.CustomEvent;
-import com.matt.Helper.Driver;
+import com.matt.handler.CustomException;
+import com.matt.helper.CustomEvent;
+import com.matt.helper.Driver;
 
 public class CommonPage extends CustomEvent {
 

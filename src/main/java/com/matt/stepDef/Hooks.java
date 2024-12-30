@@ -1,9 +1,9 @@
 package com.matt.stepDef;
 
-import com.matt.Helper.Browser;
-import com.matt.Helper.CustomEvent;
-import com.matt.Helper.Driver;
-import com.matt.Helper.PropertyManager;
+import com.matt.helper.Browser;
+import com.matt.helper.CustomEvent;
+import com.matt.helper.Driver;
+import com.matt.helper.PropertyManager;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
